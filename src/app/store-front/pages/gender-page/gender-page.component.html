@@ -1,0 +1,19 @@
+<h1 class="text-3xl font-bold font-montserrat">Todos los productos</h1>
+<h2 class="text-xl">
+  Para <span class="text-accent">{{ gender() | productGender }}</span>
+</h2>
+
+<div class="divider"></div>
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-3 gap-3"
+>
+  @for (product of genderProductsResource.value()?.products; track $index) {
+  <product-card [product]="product" />
+  }
+  <!-- Empty -->
+
+  @empty {
+  <p>No se encuentran productos</p>
+  }
+</div>
