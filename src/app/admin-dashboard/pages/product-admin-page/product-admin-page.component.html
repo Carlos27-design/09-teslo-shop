@@ -1,0 +1,7 @@
+@if(productsResource.isLoading()){
+<div class="flex justify-center items-center h-screen">
+  <span class="loading loading-dots loading-lg"></span>
+</div>
+} @if(productsResource.hasValue()){
+<product-details [product]="productsResource.value()!" />
+}

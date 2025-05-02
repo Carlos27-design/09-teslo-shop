@@ -8,8 +8,13 @@
         class="w-full object-cover h-full animate-fadeIn"
       />
     </div>
-
     <!--  -->
+    }@empty {
+    <img
+      [src]="null | productImage"
+      alt="Producto"
+      class="w-full object-cover h-full animate-fadeIn"
+    />
     }
   </div>
 
